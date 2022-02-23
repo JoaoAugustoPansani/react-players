@@ -1,22 +1,15 @@
 <h1 align="center">
-    <img alt="Proffy" title="Proffy" src=".github/logo.svg" />
+    React Players
 </h1>
-
-<p align="center">
-  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
-</p>
 
 <br>
 
-## 🚀 Tecnologias
+## 🚀 Tecnologies
 
 This project was developed with the following technologies:
 
 - [React](https://reactjs.org)
-- [MaterialUI] (https://mui.com/)
+- [Material UI](https://mui.com/)
 
 ## 💻 Project
 
