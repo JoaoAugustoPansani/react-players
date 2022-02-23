@@ -38,13 +38,16 @@ const PlayerControls = (props) => {
 
     //Volume Icon Handler
     const [volumeValue, setVolumeValue] = useState(30);
-    const [volumeIcon, setVolumeIcon] = useState(VolumeDownIcon)
+    const [volumeIcon, setVolumeIcon] = useState(VolumeDownIcon);
 
     const handleChange = (event, newValue) => {
         setVolumeValue(newValue);
     };
 
     useEffect(() => {
+        //Handling the audio volume
+        props.audioElement.current.volume = volumeValue / 100;
+        //Volume icon conditions
         if (volumeValue === 0) {
             setVolumeIcon(VolumeMuteIcon)
         }
@@ -64,6 +67,7 @@ const PlayerControls = (props) => {
             setVolumeValue(30)
         };
     };
+
 
     return <Box sx={{
         display: 'flex',
@@ -166,7 +170,11 @@ const PlayerControls = (props) => {
                         transition: 'all 0.2s ease 0.1s'
                     })
                 }>
-                    <VolumeSlider value={volumeValue} onChange={handleChange} />
+                    <VolumeSlider
+                        value={volumeValue}
+                        onChange={handleChange}
+                        audio={props.audioElement}
+                    />
                 </Box>
                 <SvgIcon component={volumeIcon} onClick={muteAudio} sx={{ color: 'white' }} />
             </Box>
