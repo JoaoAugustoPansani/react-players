@@ -1,10 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 
 import { Slider, Box, SvgIcon, Typography } from "@mui/material";
 import PauseRounded from '@mui/icons-material/PauseRounded';
 import PlayArrowRounded from '@mui/icons-material/PlayArrowRounded';
 import { styled, useTheme } from "@mui/material/styles";
-import { width } from "@mui/system";
 
 const TinyText = styled(Typography)({
     fontSize: '0.75rem',
@@ -179,7 +178,8 @@ const MusicPlayer = (props) => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            textAlign: 'center'
         }}>
             <Typography variant="body1">
                 {props.title}

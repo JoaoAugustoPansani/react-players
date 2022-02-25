@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './App.css';
 import PlaylistPlayer from './Components/PlaylistPlayer/PlaylistPlayer';
@@ -39,32 +39,6 @@ function App() {
     },
   ];
 
-  const album = {
-    title: 'Human',
-    img_src: './assets/album_covers/human.jpeg',
-    songs: [
-      {
-        id: 1,
-        src: './assets/songs/one.mp3',
-        title: 'Deixa Bater',
-        artist_names: 'Garius'
-      },
-      {
-        id: 2,
-        src: './assets/songs/two.mp3',
-        title: 'X-FILES',
-        artist_names: 'Garius'
-      },
-      {
-        id: 3,
-        src: './assets/songs/three.mp3',
-        title: 'Exagerado',
-        artist_names: 'Garius'
-      },
-    ]
-  };
-
-
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{width: '390px', margin: 'auto'}}>
@@ -74,8 +48,8 @@ function App() {
           React Players
         </Typography>
         <Typography variant='caption' component="div" sx={{
-          color: 'white', fontWeight: 'bold', width: 'fit-content',
-          margin: '10px 0px 0px auto'
+          color: 'white', width: 'fit-content', 
+          margin: '5px 0px 0px auto'
         }}>
           by João Augusto Pansani
         </Typography>

@@ -48,7 +48,6 @@ const MusicPlayerGrid = (props) => {
         current = currentAudio;
         setCurrentPlayer(current);
 
-        console.log(currentPlayer)
     }
 
 

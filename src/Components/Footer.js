@@ -16,16 +16,28 @@ const Footer = () => {
             display: 'flex',
             flexDirection: 'row'
         }}>
-            <Typography variant="body2" sx={{
-                textDecoration: 'underline',
-            }}>
+            <Typography variant="body2"
+                component="a"
+                target="_blank"
+                href="https://github.com/JoaoAugustoPansani"
+                sx={{
+                    textDecoration: 'underline',
+                    cursor: 'pointer',
+                    color: 'white'
+                }}>
                 GitHub
             </Typography>
-            <Typography variant="body1" sx={{margin: 'auto 20px'}}>
+            <Typography variant="body1" sx={{ margin: 'auto 20px' }}>
                 |
             </Typography>
-            <Typography variant="body2" sx={{
+            <Typography variant="body2" 
+            component="a"
+            target="_blank"
+            href="https://www.jpansani.com"
+            sx={{
                 textDecoration: 'underline',
+                cursor: 'pointer',
+                color: 'white'
             }}>
                 Portifolio
             </Typography>

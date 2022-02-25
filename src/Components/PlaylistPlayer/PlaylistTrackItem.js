@@ -44,7 +44,8 @@ const PlaylistTrackItem = (props) => {
                 width: '100%',
             }}>
                 <Typography variant="subtitle1" 
-                sx={props.currentSongIndex == props.track.id - 1 ? {
+                // This is why your tracks ids must start at 1 and follows the order
+                sx={props.currentSongIndex === props.track.id - 1 ? {
                     color: 'red'
                 } : {
                     color: 'white'
@@ -52,7 +53,7 @@ const PlaylistTrackItem = (props) => {
                     {props.title}
                 </Typography>
                 <Typography variant="caption" 
-                sx={props.currentSongIndex == props.track.id - 1 ? {
+                sx={props.currentSongIndex === props.track.id - 1 ? {
                     color: 'red'
                 } : {
                     color: 'white'
