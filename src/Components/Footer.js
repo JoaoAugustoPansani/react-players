@@ -12,7 +12,6 @@ const Footer = () => {
         margin: '40px auto 20px auto'
     }}>
         <Box sx={{
-            width: '100px',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
