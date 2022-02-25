@@ -140,7 +140,10 @@ const PlayerControls = (props) => {
         }}>
             <Box>
                 <FastRewindRounded sx={{ color: 'white' }}
-                    onClick={() => props.skipSong(false)} />
+                    onClick={() => {props.skipSong(false)
+                    if(!props.isPlaying){
+                        props.setIsPlaying(true)
+                    }}} />
             </Box>
             <Box>
                 {props.isPlaying ?
@@ -152,7 +155,10 @@ const PlayerControls = (props) => {
             </Box>
             <Box>
                 <FastForwardRounded sx={{ color: 'white' }}
-                    onClick={() => props.skipSong()} />
+                    onClick={() => {props.skipSong()
+                        if(!props.isPlaying){
+                            props.setIsPlaying(true)
+                        }}} />
             </Box>
             <Box sx={{
                 marginLeft: 'auto',
