@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 import PlaylistPlayer from './Components/PlaylistPlayer/PlaylistPlayer';
 import MusicPlayerGrid from './Components/MusicPlayer/MusicPlayerGrid'
-import { Typography } from '@mui/material';
+import { Alert, Typography, useMediaQuery } from '@mui/material';
 import { Box } from '@mui/system';
 import Footer from './Components/Footer';
 
 function App() {
+  //Phone alert states and handlers
+  const iphoneDetect = useMediaQuery('(max-width: 600px)');
+  const [open, setOpen] = useState(true);
+
+  //Fake database
   const tracks = [
     {
       id: 1,
@@ -41,19 +46,34 @@ function App() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{width: '390px', margin: 'auto'}}>
+      {iphoneDetect && open ? 
+        <Alert severity='info' onClose={() => {
+          setOpen(false)
+        }} >
+          If you're using an Iphone, the audio informations will load after playing. &nbsp;
+          <Box component='a'
+          target="_blank"
+          href="https://stackoverflow.com/questions/23551456/ios-browsers-not-respecting-html5-audio-preload-tag">
+            <Box component='span' sx={{
+              textDecoration: 'underline'
+            }}>
+              Read More
+            </Box>
+          </Box>
+        </Alert> : ''}
+      <Box sx={{ width: '390px', margin: 'auto' }}>
         <Typography variant='h2' mt={4} component="div" sx={{
           color: 'white', fontWeight: 'bold', width: 'fit-content'
         }}>
           React Players
         </Typography>
         <Typography variant='caption' component="div" sx={{
-          color: 'white', width: 'fit-content', 
+          color: 'white', width: 'fit-content',
           margin: '5px 0px 0px auto'
         }}>
           by João Augusto Pansani
         </Typography>
-        </Box>
+      </Box>
       <section>
         <PlaylistPlayer
           tracks={tracks} />
@@ -62,7 +82,7 @@ function App() {
         <MusicPlayerGrid
           songs={tracks} />
       </section>
-      <Footer/>
+      <Footer />
     </Box>
   );
 }

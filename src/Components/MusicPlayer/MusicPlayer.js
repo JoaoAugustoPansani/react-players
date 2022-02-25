@@ -61,7 +61,7 @@ const MusicPlayer = (props) => {
     }}>
         <audio id={props.slug} src={props.audioSrc} onLoadedData={getUpdatedTime}
             onTimeUpdate={getUpdatedTime} onEnded={() => {setIsPlaying(false)}}
-            ref={audioRef} />
+            ref={audioRef} preload='auto'/>
         <Box sx={{
             position: 'relative',
             width: '230px',
