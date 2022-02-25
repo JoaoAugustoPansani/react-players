@@ -14,7 +14,9 @@ const Footer = () => {
         <Box sx={{
             width: '100px',
             display: 'flex',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center'
         }}>
             <Typography variant="body2"
                 component="a"
